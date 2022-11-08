@@ -8,7 +8,7 @@ def fizzbuzz():                       # Creating a function to play the game Fiz
             i += 'buzz'
         else:
             i += str(x)
-    return i
+        print(i)
 
 if __name__ == "__main__":
     fizzbuzz()
