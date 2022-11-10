@@ -3,10 +3,10 @@ def fizzbuzz():                       # Creating a function to play the game Fiz
     for x in x:
         i = ''
         if x % 3 == 0:
-            i += 'fizz'
+            i = 'fizz'
         if x % 5 == 0:
             i += 'buzz'
-        else:
+        if i == '':
             i += str(x)
         print(i)
 
