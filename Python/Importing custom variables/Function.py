@@ -3,21 +3,26 @@ import matplotlib.pyplot as plt
 
 # Let's make a bunch of functions!
 
-def chisq(obs, exp):        # first to make a chisquare test
+def summer(obs, exp):        # first to make a summing function
     """
-    Does a chi squared test on two variables
+    Does a weird summation on two lists
 
-    obs: float or array-type, observed value
-    exp: float or array-type, expected value
+    obs: array-type, observed value
+    exp: array-type, expected value
     note: obs and exp must be of same length
     """
+    if type(obs) != list:
+        print('This function only accepts lists!')
+        return
+    
     result = list()
 
-    for obs in obs:
-        for exp in exp:
-            test = (obs - exp)/exp
+    for y in obs:
+        for x in exp:
+            test = (y - x)/x
             result.append(test)
-    return sum(result)
+
+    return print(sum(result))
 
 def qikplot(x, y):          # quick plot function
     """
@@ -27,6 +32,9 @@ def qikplot(x, y):          # quick plot function
     x: x-data
     y: y-data 
     """
-    graph = plt.plot(x, y, 'o', label = 'Data')
-    return graph
+    plt.plot(x, y, 'o', label = 'Data')
+    show = plt.show()
+    return show
 
+if __name__ == "__main__":
+    summer(list(range(1,100)), list(range(100, 1)))
