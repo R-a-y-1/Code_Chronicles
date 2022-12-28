@@ -36,5 +36,13 @@ def qikplot(x, y):          # quick plot function
     show = plt.show()
     return show
 
+# Starting to work with classes and OOP
+class graph:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    
+
 if __name__ == "__main__":
     summer(list(range(1,100)), list(range(100, 1)))
